@@ -28,10 +28,10 @@ describe('AppComponent', () => {
     expect(app.newTodo instanceof Todo).toBeTruthy();
   });
 
-  it('should display "To Do App" in h1 tag', () => {
+  it('should display "ToDo App" in h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('To Do App');
+    expect(compiled.querySelector('h1').textContent).toContain('ToDo App');
   });
 });
