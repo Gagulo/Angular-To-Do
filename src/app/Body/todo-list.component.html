@@ -1,0 +1,11 @@
+<section class="main" *ngIf="todos.length > 0">
+  <ul class="todo-list">
+    <li *ngFor="let todo of todos" [class.completed]="todo.completed">
+      <app-list-item
+      [todo]='todo'
+      (toggleComplete)='onToggleComplete($event)'
+      (remove)='onRemoveTodo($event)'
+      ></app-list-item>
+    </li>
+  </ul>
+</section>
