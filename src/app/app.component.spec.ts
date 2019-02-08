@@ -1,9 +1,15 @@
 import { TestBed, async } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
+import { Todo } from './Classes/todo';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        FormsModule
+      ],
       declarations: [
         AppComponent
       ],
@@ -16,16 +22,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ToDos'`, () => {
+  it(`should have a newTodo todo`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('ToDos');
+    expect(app.newTodo instanceof Todo).toBeTruthy();
   });
 
-  it('should render title in a h1 tag', () => {
+  it('should display "To Do App" in h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to ToDos!');
+    expect(compiled.querySelector('h1').textContent).toContain('To Do App');
   });
 });
