@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './Header/header.component';
 import { TodoListComponent } from './Body/todo-list.component';
 import { ListItemComponent } from './Body/list-item/list-item.component';
+import { FooterComponent } from './Footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     TodoListComponent,
-    ListItemComponent
+    ListItemComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

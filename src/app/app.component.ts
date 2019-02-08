@@ -15,7 +15,7 @@ export class AppComponent {
     this.todoService.addTodo(todo);
   }
 
-  onToggleTodoComplete(todo: Todo) {
+  onToggleComplete(todo: Todo) {
     this.todoService.toggleTodoComplete(todo);
   }
 
